@@ -10,6 +10,10 @@ import Alamofire
 
 public class NetworkManager {
     
+    public init() {
+        
+    }
+    
     public func makeTestRequest() async {
         // Automatic String to URL conversion, Swift concurrency support, and automatic retry.
         let response = await AF.request("https://httpbin.org/get", interceptor: .retryPolicy)
