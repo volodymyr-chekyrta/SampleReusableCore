@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "SampleReusableCore",
+    platforms: [
+        .iOS(.v15)
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -14,13 +17,13 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // SPM does not support mixing of branch-based and unversioned dependencies
+        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.9.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "Core", dependencies: [],
+            name: "Core", dependencies: [.product(name: "Alamofire", package: "Alamofire"),],
             path: "Core/Sources/Core"
         ),
         .testTarget(
