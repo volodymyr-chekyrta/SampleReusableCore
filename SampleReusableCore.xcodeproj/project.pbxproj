@@ -11,7 +11,23 @@
 		078F6D7C2C3D88A1009C2EA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078F6D7B2C3D88A1009C2EA5 /* ContentView.swift */; };
 		078F6D7E2C3D88A2009C2EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078F6D7D2C3D88A2009C2EA5 /* Assets.xcassets */; };
 		078F6D822C3D88A2009C2EA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 078F6D812C3D88A2009C2EA5 /* Preview Assets.xcassets */; };
+		078F6D8A2C3D8DFC009C2EA5 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = 078F6D892C3D8DFC009C2EA5 /* Core */; };
+		078F6D8B2C3D8DFC009C2EA5 /* Core in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 078F6D892C3D8DFC009C2EA5 /* Core */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		078F6D8C2C3D8DFC009C2EA5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				078F6D8B2C3D8DFC009C2EA5 /* Core in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		078F6D762C3D88A1009C2EA5 /* SampleReusableCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleReusableCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078F6D8A2C3D8DFC009C2EA5 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +55,7 @@
 			children = (
 				078F6D782C3D88A1009C2EA5 /* SampleReusableCore */,
 				078F6D772C3D88A1009C2EA5 /* Products */,
+				078F6D882C3D8DFC009C2EA5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +87,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		078F6D882C3D8DFC009C2EA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,12 +104,16 @@
 				078F6D722C3D88A1009C2EA5 /* Sources */,
 				078F6D732C3D88A1009C2EA5 /* Frameworks */,
 				078F6D742C3D88A1009C2EA5 /* Resources */,
+				078F6D8C2C3D8DFC009C2EA5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SampleReusableCore;
+			packageProductDependencies = (
+				078F6D892C3D8DFC009C2EA5 /* Core */,
+			);
 			productName = SampleReusableCore;
 			productReference = 078F6D762C3D88A1009C2EA5 /* SampleReusableCore.app */;
 			productType = "com.apple.product-type.application";
@@ -361,6 +390,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		078F6D892C3D8DFC009C2EA5 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 078F6D6E2C3D88A1009C2EA5 /* Project object */;
 }
